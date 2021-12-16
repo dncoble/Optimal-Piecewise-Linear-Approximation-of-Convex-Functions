@@ -4,3 +4,7 @@ Amin et al. introduced the idea of piecewise sigmoid approximations that use slo
 1. Show the derivation of a methodology for creating 'best' PWL functions.
 2. Show the numbers for sigmoid, tanh, and arctan functions.
 3. Run these functions on an FPGA.
+<p align="center">
+<img src="LaTeX/figures/big-G-figure.png" alt="drawing" width="600"/>
+</p>
+<p align="center"> A pretty picture </p>
