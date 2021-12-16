@@ -191,12 +191,16 @@ class piecewise_approximator:
                 rtrn = False
         return rtrn
     
-    def get_values(self, latex=True):
+    def get_values(self, latex=True, print_it = False):
         if(not latex):
+            if(print_it):
+                print('{}\n{}\n{}'.format(self.m, self.c, self.b))
             return '{}\n{}\n{}'.format(self.m, self.c, self.b)
-        rtrn = '\hline\n m & c & b \\ \n \hline'
+        rtrn = '\hline\n m & c & b \\\ \n \hline \n'
         for m_, c_, b_ in zip(self.m, self.c, self.b):
-            rtrn.append('{} & {} & {} \\ \n \hline'.format(m_, c_, b_))
+            rtrn += ('{} & {} & {} \\\ \n \hline \n'.format(m_, c_, b_))
+        if(print_it):
+            print(rtrn)
         return rtrn
         
         
