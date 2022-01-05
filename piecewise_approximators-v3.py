@@ -147,7 +147,7 @@ class piecewise_approximator:
             plt.savefig(savpath, dpi=800)
         plt.show()
         plt.close()
-
+        
 if __name__ == '__main__':
     savfig=False
     #%% sigmoid function
@@ -156,18 +156,18 @@ if __name__ == '__main__':
     df = lambda x: exp(-1*x)/(1+exp(-1*x))**2
     f_bar = piecewise_approximator(f, df, g = lambda x: 1-x, m0=2)
     f_bar.plot(y_max = 1.2, plot_neg = True, plot_true = True, savfig=savfig, savpath="./plots/sig2.png")
-    print("sigmoid, method 2 max dif: " + str(f_bar.get_delta()))
+    print("sigmoid approx. max dif: " + str(f_bar.get_delta()))
     #%% arctan function
     from math import atan, pi
     f = atan
     df = lambda x: 1/(1 + x**2)
     f_bar = piecewise_approximator(f, df, g = lambda x: -1*x, m0=0, asmp=pi/2, line_segs = 12)
     f_bar.plot(y_min = -1*(pi/2 + .2),y_max = pi/2 + .2, plot_neg = True, savfig=savfig, savpath="./plots/atan2.png")
-    print("arctan, method 2 max dif: " + str(f_bar.get_delta()))
+    print("arctan approx. max dif: " + str(f_bar.get_delta()))
     #%% tanh function
     from numpy import tanh, cosh
     f = tanh
     df = lambda x: 1/cosh(x)**2
     f_bar = piecewise_approximator(f, df, g = lambda x: -1*x, m0=0)
     f_bar.plot(x_max = 8, y_min = -1.2 ,y_max = 1.2, plot_neg = True, savfig=savfig, savpath="./plots/tanh2.png")
-    print("tanh, method 2 max dif: " + str(f_bar.get_delta()))
+    print("tanh approx. max dif: " + str(f_bar.get_delta()))
