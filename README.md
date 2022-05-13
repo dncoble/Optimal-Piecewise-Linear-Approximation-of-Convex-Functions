@@ -1,10 +1,6 @@
-# Coble_2022_Piecewise_Activation_Functions
+# Optimal Piecewise Linear Approximation of Convex Functions
+A python implementation of the algorithm used to generate optimal piecewise linear approximations of convex functions proposed by Imamoto and Tang [[1]](#Citations).
+## How to use
 
-Amin et al. introduced the idea of piecewise sigmoid approximations that use slopes which are powers of two (and bitwise shifts in fixed point numbers) to accelerate performance. However I have not seen a more systematic investigation of functions of this type. This paper has three goals.
-1. Show the derivation of a methodology for creating 'best' PWL functions.
-2. Show the numbers for sigmoid, tanh, and arctan functions.
-3. Run these functions on an FPGA.
-<p align="center">
-<img src="LaTeX/figures/big-G-figure.PNG" alt="drawing" width="600"/>
-</p>
-<p align="center"> A pretty picture </p>
+## Citations
+[1] Imamoto, A., & Tang, B. (2008, October). Optimal piecewise linear approximation of convex functions. In Proceedings of the world congress on engineering and computer science (pp. 1191-1194).
