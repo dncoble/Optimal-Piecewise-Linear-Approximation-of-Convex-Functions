@@ -1,5 +1,5 @@
 # Optimal Piecewise Linear Approximation of Convex Functions
-A python implementation of the algorithm used to generate optimal piecewise linear approximations of convex functions proposed by Imamoto and Tang [[1]](#Citations). The algorithm uses an iterative search to find the piecewise linear function *g* with smallest minimax devitation from *f*.
+A python implementation of the algorithm used to generate optimal piecewise linear approximations of convex functions proposed by Imamoto and Tang [[1]](#Citations). The algorithm uses an iterative search to find the piecewise linear function *g* with smallest minimax deviation from *f*.
 <p align="center">
 <img src="increase_line_segs.gif" alt="drawing" width="400"/>
 </p>
